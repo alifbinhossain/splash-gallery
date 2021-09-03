@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- --------------------------- CSS STYELSHEET ---------------------------- -->
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- EXTERNAL -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-query.css" />
+    <title>Splash-Gallery</title>
+  </head>
+  <body>
+    <header class="p-5">
+      <h1 class="heading">
+        <span class="heading-primary d-block">Splash</span>
+        <span class="heading-sub d-block">Explore. Create. Inspire.</span>
+      </h1>
+    </header>
+    <!-- ------------------------ DISPLAY PHOTO SECTION ------------------------ -->
+    <main>
+      <ul class="reserved-list d-flex justify-content-center my-5">
+        <li class="list-item">
+          <a onclick="loadData('animal')" href="#gallery">Animal</a>
+        </li>
+        <li class="list-item">
+          <a onclick="loadData('nature')" id="nature" href="#gallery">Nature</a>
+        </li>
+        <li class="list-item">
+          <a onclick="loadData('photography')" href="#gallery">Photography</a>
+        </li>
+        <li class="list-item">
+          <a onclick="loadData('building')" href="#gallery">Building</a>
+        </li>
+        <li class="list-item">
+          <a onclick="loadData('car')" href="#gallery">Car</a>
+        </li>
+        <li class="list-item">
+          <a onclick="loadData('gadget')" href="#gallery">Gadget</a>
+        </li>
+      </ul>
+      <div class="input-group mb-3 w-50 mx-auto full-width">
+        <input
+          id="input-field"
+          type="text"
+          class="form-control"
+          placeholder="search photos by name"
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+          maxlength="30"
+        />
+        <button
+          onclick="loadData()"
+          class="btn btn-outline-warning"
+          type="submit"
+          id="button-addon2"
+        >
+          Search
+        </button>
+      </div>
+      <h3 id="notify-text" class="text-center mb-5 notify-text">
+        Search photos by name
+      </h3>
+      <section id="container" class="container my-5 p-3">
+        <div id="gallery" class="gallery">
+          <div class="photo"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ------------------------------- FOOTER -------------------------------- -->
+    <footer class="text-center my-3">
+      <small
+        >Copyright &copy;All rights reserved by Alif Bin Hossain 2021.</small
+      >
+    </footer>
+
+    <!-- ------------------------------ JS FILES ------------------------------- -->
+    <!-- BOOTSTRAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- EXTERNAL -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
