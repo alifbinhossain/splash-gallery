@@ -25,4 +25,8 @@
     font-size: 0.8rem;
     padding: 0 0.5rem;
   }
+  .error-text {
+    text-align: center;
+    font-size: 1rem;
+  }
 }
