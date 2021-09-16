@@ -95,13 +95,14 @@ footer a:hover {
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 0%;
+  left: 50%;
+  width: 0;
   border-bottom: 2px solid #ffc947;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .list-item a:hover::before {
   width: 100%;
+  left: 0;
 }
 .list-item a:active,
 .list-item a:visited {

@@ -2,6 +2,8 @@
 const container = document.getElementById("container");
 const photoGallery = document.getElementById("gallery");
 const notifyText = document.getElementById("notify-text");
+const searchBtn = document.getElementById("search-btn");
+const inputField = document.getElementById("input-field");
 const spinner = `<div class="sk-chase mx-auto mt-4">
                  <div class="sk-chase-dot"></div>
                  <div class="sk-chase-dot"></div>
@@ -12,11 +14,15 @@ const spinner = `<div class="sk-chase mx-auto mt-4">
                  </div> `;
 let searchResult;
 
+/* ------------------------- ENTER KEY PRESS ACTION ------------------------- */
+inputField.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") searchBtn.click();
+});
+
 /* ------------------------ LOAD DATA FUNCTIONALLITY ------------------------ */
 const loadData = (Str) => {
   container.innerHTML = "";
   let searchText = Str;
-  const inputField = document.getElementById("input-field");
   inputField.value != "" ? (searchText = inputField.value) : (searchText = Str);
   searchResult = searchText;
   inputField.value = "";
@@ -33,6 +39,7 @@ loadData("kashmir");
 
 /* ---------------------- DISPLAY IMAGE FUNCTIONALLITY ---------------------- */
 const displayImages = (elements) => {
+  console.log(elements);
   photoGallery.innerHTML = "";
 
   if (searchResult && elements.length !== 0) {
